@@ -1,11 +1,9 @@
-#class node
 class Node:
     def __init__(self, value):
         self.left = None
         self.right = None
         self.value = value
 
-#insert function
 def insert(root, node):
     if (root is None):
         root = node
@@ -23,12 +21,41 @@ def insert(root, node):
         else:
             insert(root.right, node)
 
-#print tree
 def printtree(root):
     if root:
         printtree(root.left)
         print(root.value)
         printtree(root.right)
+
+def finditem(root, value):
+    if root is None:
+        return False
+
+    conditions = 0
+    curNode = root
+    while(True):
+        conditions = conditions + 1
+
+        if (curNode.value == value):
+            print(conditions)
+            return True
+
+        if (curNode.value < value):
+            if (curNode.right is not None):
+                curNode = curNode.right
+            else:
+                print("\n", value)
+                break
+        else:
+            if (curNode.left is not None):
+                curNode = curNode.left
+            else:
+                print("\n", value)
+                break
+
+    print(conditions)
+    return False
+
 
 root = Node(40)
 insert(root, Node(50))
@@ -37,6 +64,11 @@ insert(root, Node(20))
 insert(root, Node(35))
 insert(root, Node(45))
 insert(root, Node(42))
-
+insert(root, Node(41))
 
 printtree(root)
+
+if (True == finditem(root, 40)):
+    print("Found!")
+else:
+    print("Not found!")
