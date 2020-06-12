@@ -1,3 +1,5 @@
+import timeit
+
 class Node:
     def __init__(self, value):
         self.left = None
@@ -68,7 +70,11 @@ insert(root, Node(41))
 
 printtree(root)
 
-if (True == finditem(root, 40)):
+t0 = timeit.timeit()
+if (True == finditem(root, 43)):
     print("Found!")
 else:
     print("Not found!")
+t1 = timeit.timeit()
+
+print(t1-t0)
