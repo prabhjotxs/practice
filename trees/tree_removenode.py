@@ -40,14 +40,25 @@ def remove(root, value):
             parentNode = currNode
             currNode = currNode.left
         elif (currNode.value == value):
+            #if it is a leaf Node
+            if (currNode.right is None and currNode.left is None):
+                if (parentNode is None):
+                    return None
+                elif (parentNode.value < currNode.value):
+                    parentNode.right = currNode
+                    break
             #if right node is null
-            if (currNode.right is None):
+            elif (currNode.right is None):
                 #remove root node case
                 if (parentNode is None):
                     root = currNode.left
                 else:
-                    if
-                parentNode.left = currNode.left
+                    #if not root Node
+                    #node to remove is found at the left side
+                    if (parentNode.value > currNode.value):
+                        parentNode.left = currNode.left
+                    elif (parentNode.value < currNode.value):
+                        parentNode.right = currNode.left
 
 
 

@@ -26,9 +26,14 @@ def insert(root, node):
 #print tree
 def printtree(root):
     if root:
-        printtree(root.left)
         print(root.value)
+        #print("before left")
         printtree(root.right)
+        #print("after left")
+        #print(root.value)
+        #print("before right")
+        printtree(root.left)
+        #print("after right")
 
 root = Node(40)
 insert(root, Node(50))

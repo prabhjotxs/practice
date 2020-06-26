@@ -1,0 +1,13 @@
+REDIS
+Micro Service Architecture
+Web sockets
+Consistent hashing
+Rate limit
+Vertical scaling
+Horizontal scaling
+OAuth
+
+Netflix design
+Twitter design
+Parking lot design
+Bookmyshow design
