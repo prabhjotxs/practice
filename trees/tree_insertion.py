@@ -26,11 +26,11 @@ def insert(root, node):
 #print tree
 def printtree(root):
     if root:
-        print(root.value)
+        #print(root.value)
         #print("before left")
         printtree(root.right)
         #print("after left")
-        #print(root.value)
+        print(root.value)
         #print("before right")
         printtree(root.left)
         #print("after right")

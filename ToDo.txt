@@ -11,3 +11,15 @@ Netflix design
 Twitter design
 Parking lot design
 Bookmyshow design
+
+Producer Consumer
+Mutex/Sema in interrupt context
+Create thread in Linux
+atomic
+Reverse linked list using recursion
+DCAM/ISP power sequence
+CSI
+I2C
+Linux internals: tasklets, workqeueues, soft irqs, spin locks, volatile
+IOCTLs, Memory map,
+read camera.h
